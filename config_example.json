@@ -1,7 +1,5 @@
 {
-    // 各配置具体说明，见 [https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用教程#配置-configjson]
 
-    //== API 配置 ==
     "openai_api_key": "", // 你的 OpenAI API Key，一般必填，若空缺则需在图形界面中填入API Key
     "google_palm_api_key": "", // 你的 Google PaLM API Key，用于 Google PaLM 对话模型
     "xmchat_api_key": "", // 你的 xmchat API Key，用于 XMChat 对话模型
@@ -73,8 +71,8 @@
     // "https_proxy": "http://127.0.0.1:1079",
     // "http_proxy": "http://127.0.0.1:1079",
     // 自定义端口、自定义ip（请替换对应内容）
-    // "server_name": "0.0.0.0",
+     "server_name": "chat.gateai.ir",
     // "server_port": 7860,
     // 如果要share到gradio，设置为true
-    // "share": false,
+     "share": true,
 }
