@@ -9,7 +9,7 @@ class TelegramBot:
 
     def __init__(self):
         print("HELLO")
-        self.TOKEN = "6252991905:AAHj7riNlmu5N_PK8xpja_38ARJ2RJ_DVs0"
+        self.TOKEN = "5921556318:AAFP-IJuj73H5xIe9J147ViVkXpLLQ5BqUc"
         self.api = "a"
         pass
     async def start(self, update: Update, context: CallbackContext):
