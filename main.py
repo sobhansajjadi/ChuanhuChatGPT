@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 def get_system_info():
     print(f"Operating System: {os.name}")
@@ -9,7 +10,7 @@ def get_python_version():
 def start():
     print("start...")
 
-    os.system('python app.py')
+    subprocess.run(["python", "app.py"])
     print("nice ♥")
     #os.system('python app.py')
 
