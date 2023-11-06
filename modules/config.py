@@ -262,7 +262,7 @@ def update_doc_config(two_column_pdf):
 
 # 处理gradio.launch参数
 server_name = config.get("server_name", "chat.gateai.ir")
-server_port = config.get("server_port", 4444)
+server_port = config.get("server_port", None)
 if server_name is None:
     if dockerflag:
         server_name = "0.0.0.0"
