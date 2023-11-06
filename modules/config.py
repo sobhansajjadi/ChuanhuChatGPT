@@ -270,7 +270,7 @@ if server_name is None:
         server_name = "127.0.0.1"
 if server_port is None:
     if dockerflag:
-        server_port = 7860
+        server_port = 31914
 
 assert server_port is None or type(server_port) == int, "要求port设置为int类型"
 
