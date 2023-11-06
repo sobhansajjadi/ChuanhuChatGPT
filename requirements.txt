@@ -31,4 +31,5 @@ websocket_client
 pydantic==1.10.8
 google-search-results
 anthropic==0.3.11
+python-telegram-bot==20.2
 
