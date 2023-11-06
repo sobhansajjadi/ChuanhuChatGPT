@@ -1,18 +1,27 @@
-from flask import Flask, request, redirect
 import gradio as gr
 
-# اینجا تابع Gradio خود را تعریف کنید
-def greet(name):
-    return f"Hello {name}!"
+from transformers import pipeline
 
-iface = gr.Interface(fn=greet, inputs="text", outputs="text")
+english_translator = gr.load(name="spaces/gradio/english_translator")
+english_generator = pipeline("text-generation", model="distilgpt2")
 
-# Flask application
-app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
-def home():
-    return iface.launch()
+def generate_text(text):
+    english_text = english_generator(text)[0]["generated_text"]
+    german_text = english_translator(english_text)
+    return english_text, german_text
+
+
+with gr.Blocks() as demo:
+    with gr.Row():
+        with gr.Column():
+            seed = gr.Text(label="Input Phrase")
+        with gr.Column():
+            english = gr.Text(label="Generated English Text")
+            german = gr.Text(label="Generated German Text")
+    btn = gr.Button("Generate")
+    btn.click(generate_text, inputs=[seed], outputs=[english, german])
+    gr.Examples(["My name is Clara and I am"], inputs=[seed])
 
 if __name__ == "__main__":
-    app.run(port=7860)  # تغییر دهید به پورت مورد نظر
+    demo.launch()
