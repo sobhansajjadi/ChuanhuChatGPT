@@ -1,3 +1,4 @@
+python-telegram-bot==20.2
 gradio==3.43.2
 gradio_client==0.5.0
 pypinyin
@@ -31,5 +32,4 @@ websocket_client
 pydantic==1.10.8
 google-search-results
 anthropic==0.3.11
-python-telegram-bot==20.2
 
