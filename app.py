@@ -7,7 +7,7 @@ class TelegramBot:
     Class representing a ChatGPT Telegram Bot.
     """
 
-    def init(self):
+    def __init__(self):
         print("HELLO")
         self.TOKEN = "6252991905:AAHj7riNlmu5N_PK8xpja_38ARJ2RJ_DVs0"
         self.api = "a"
