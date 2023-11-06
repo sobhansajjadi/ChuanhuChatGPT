@@ -10,6 +10,8 @@ def get_python_version():
 def get_node_version():
     print(f"Node.js Version: {os.popen('node -v').read()}")
     os.system('python app.py')
+    print("nice♥")
+    #os.system('python app.py')
 
 
 if __name__ == "__main__":
