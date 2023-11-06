@@ -56,6 +56,6 @@ class TelegramBot:
         application.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), self.prompt))
         application.run_polling()
 
-if name == 'main':
+if __name__ == "__main__":
     tb = TelegramBot()
     tb.main()
