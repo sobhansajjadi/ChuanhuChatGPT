@@ -263,11 +263,12 @@ def update_doc_config(two_column_pdf):
 # 处理gradio.launch参数
 server_name = config.get("server_name", None)
 server_port = config.get("server_port", None)
-if server_name is None:
-    if dockerflag:
-        server_name = "0.0.0.0"
-    else:
-        server_name = "127.0.0.1"
+#if server_name is None:
+#    if dockerflag:
+#        server_name = "0.0.0.0"
+#    else:
+#        server_name = "127.0.0.1"
+server_name = "0.0.0.0"
 if server_port is None:
     if dockerflag:
         server_port = 7860
